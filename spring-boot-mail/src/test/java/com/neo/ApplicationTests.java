@@ -28,23 +28,11 @@ public class ApplicationTests {
     @Test
     public void sendNormalTextMessage() {
         try {
-            mailService.sendSimpleMail("874822608@qq.com", SUBJECT, "Ez egy lev�l t�rzs");
+            mailService.sendSimpleMail("874822608@qq.com", SUBJECT, "测试");
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
 
-    }
-
-    @Test
-    public void sendHtmlTemplateMessage() {
-        String[] messages = {"Ez egy �zenet�������", "Valami", "m�sik", "Harmadik"};
-        Map<String, Object> datas = new HashMap<>();
-        datas.put("messages", messages);
-        try {
-//            mailService.sendHtmlMail("874822608@qq.com", SUBJECT, "MailTemplate1");
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
     }
 
 
